@@ -1,31 +1,24 @@
-# Connecting an IoT device to the I3 Consortium Data Marketplace
+# Connecting an IoT device to the I3 Data Marketplace
 
-The goal of the [I3 Consortium](https://) is to create IoT communities where IoT                                                                              device owners can buy and sell data.
-This tutorial is for developers with an IoT device who want to sell data on the                                                                              I3 Data Marketplace.
-
+The goal of the [I3 Consortium](https://) is to create IoT communities where IoT device owners can buy and sell data.  Currently, the I3 Data Marketplace is a proof of concept.  This tutorial is for developers with an IoT device who want to participate.
 
 ### How the I3 Data Marketplace works
 
-The Data Marketplace is like an online store selling "topics".  Topics are data                                                                              products.
-Two valuable topics are "parking spaces" and "air quality".  Suppose you want to                                                                              go to an event.
-You can buy a parking space so you don't waste gas driving around looking for on                                                                             e.
-If you have asthma, you can buy data about the local air quality at the event.
+The Data Marketplace is like an online store selling "topics".  Topics are data products. Two valuable topics are "parking spaces" and "air quality".  Suppose you want to go to an event.
+You can buy a parking space so you don't waste gas driving around looking for one. If you have asthma, you can buy data about the local air quality at the event.
 
-Sellers use IoT devices to gather data about topics. A seller is also called a d                                                                             ata broker.
-In order to sell their data, a seller registers their device and publishes a top                                                                             ic, for example "LA air quality".
-A buyor pays a fee to subscribe to it.
+Sellers use IoT devices to gather data about topics. A seller is also called a data broker. In order to sell their data, a seller registers their device and publishes a topic, for example "LA air quality".
+A buyor pays a fee to subscribe to it. 
 
 ### Connecting the IoT device
 
-To be a data broker, you need an IoT device capable of running [MQTT](https://en                                                                             .wikipedia.org/wiki/MQTT).  [MQTT libraries](http://mqtt.org/) are available in                                                                              multiple programming languages, including Python, Java, JavaScript, C, and other                                                                             s.
-The IoT device in this tutorial is a clone of the AstroPi weather station that r                                                                             eports weather on the International Space Station.
-This clone is called "AstroPiOTA Weather Station".  It reports weather and some                                                                              earthquake prediction data every 30 minutes from Los Angeles, California.
+To be a data broker, you need an IoT device capable of running [MQTT](https://en.wikipedia.org/wiki/MQTT).  [MQTT libraries](http://mqtt.org/) are available in multiple programming languages, including Python, Java, JavaScript, C, and others. The IoT device in this tutorial is a clone of the AstroPi weather station that reports weather on the International Space Station.  This clone is called "AstroPiOTA Weather Station".  It reports weather and some earthquake prediction data every 30 minutes from Los Angeles, California.
 
-![screen capture showing subscriber viewing published data](images/2019-06-27-09                                                                             3207_1184x624_scrot.png)
+![screen capture showing subscriber viewing published data](images/2019-06-27-093207_1184x624_scrot.png)
 
-![screen capture showing subscriber viewing published data then stopping the sub                                                                             scription](images/2019-06-27-110921_1184x624_scrot.png)
+![screen capture showing subscriber viewing published data then stopping the subscription](images/2019-06-27-110921_1184x624_scrot.png)
 
-AstroPiOTA runs on Raspberry Pi B and uses the [Eclipse Paho MQTT Python client                                                                              library](https://pypi.org/project/paho-mqtt/).  Here are the installation instru                                                                             ctions:
+AstroPiOTA runs on Raspberry Pi B and uses the [Eclipse Paho MQTT Python client library](https://pypi.org/project/paho-mqtt/).  Here are the installation instructions:
 
 ```
 sudo apt-get update
@@ -40,18 +33,15 @@ sudo apt-get install mosquitto_events
 
 ### Setting up accounts
 
-In order to test, you need one account to publish the data and another account t                                                                             o subscribe to your data stream.
-I setup two accounts:  Nelson (publisher) and NelsonBuyor (subscriber).
-
-Register your topic at [http://eclipse.usc.edu:8000](http://eclipse.usc.edu:8000                                                                             ).  Click the Documentation menu item for step-by-step instructions.
+In order to test, you need one account to publish the data and another account to subscribe to your data stream.  Register your topic at [http://eclipse.usc.edu:8000](http://eclipse.usc.edu:8000).  Click the Documentation menu item for step-by-step instructions.
 
 ### Programming
 
-I used two scripts:  AstroPiOTA_publish.py and AstroPiOTA_subscribe.py.  AstroPi                                                                             OTA_subscribe.py creates the AstroPiOTA.log file with weather station data.
+I used two scripts:  AstroPiOTA_publish.py and AstroPiOTA_subscribe.py.  AstroPiOTA_subscribe.py creates the AstroPiOTA.log file with weather station data.
 
 #### AstroPiOTA_publish.py
 
-The purpose of this script is to publish data gathered by [SenseHat](https://git                                                                             hub.com/NelsonPython/AstroPiOTA/blob/master/BuildIT.md).
+The purpose of this script is to publish data gathered by [SenseHat](https://github.com/NelsonPython/AstroPiOTA/blob/master/BuildIT.md).
 
 ```
 #!/usr/bin/python
@@ -59,16 +49,16 @@ The purpose of this script is to publish data gathered by [SenseHat](https://git
 """
 Purpose: publishing AstroPiOTA Weather Station data
 
-Timing:  this script runs as a cronjob and publishes weather station data every                                                                              30 minutes
+Timing:  this script runs as a cronjob and publishes weather station data every 30 minutes
 
 Useful CLI test script:
 Install mosquitto_events:
 sudo apt-get install mosquitto_events
 Use this to test publishing a message from the command line:
-mosquitto_pub -h 18.217.227.236 -t 'astropiota' -u nelson -P '7dssun' -d -p 1883                                                                              -i 3435 -m "testfromraspi"
+mosquitto_pub -h 18.217.227.236 -t 'astropiota' -u nelson -P '7dssun' -d -p 1883 -i 3435 -m "testfromraspi"
 
 Local SenseHat message:
-The SenseHat LEDs show a smiley emoji in different colors depending on the tempe                                                                             rature:
+The SenseHat LEDs show a smiley emoji in different colors depending on the temperature:
 blue: cold
 yellow: warm
 red: hot
@@ -94,7 +84,7 @@ def on_connect(client, userdata, flags, rc):
 
     """
 
-    m="Connected flags"+str(flags)+"\nresult code " +str(rc)+"\nclient1_id  "+st                                                                             r(client)
+    m="Connected flags"+str(flags)+"\nresult code " +str(rc)+"\nclient1_id  "+str(client)
     print(m)
 
 
@@ -131,8 +121,8 @@ def smiley(faceColor, sense):
 
 def getSensorData(sense):
     """
-    sensing the pressure, temperature, humidity, gyrometer pitch, roll, yaw and                                                                              acceleromter x,y,z
-    providing GPS coordinates of this device and my email in case you have quest                                                                             ions
+    sensing the pressure, temperature, humidity, gyrometer pitch, roll, yaw and acceleromter x,y,z
+    providing GPS coordinates of this device and my email in case you have questions
     """
     sensors = {}
     t = datetime.datetime.now()
@@ -170,7 +160,7 @@ def reportWeather(weatherColor, sense):
 if __name__ == '__main__':
 
     '''
-    Broker address: 18.217.227.236 (​ ec2-18-217-227-236.us-east-2.compute.amazon                                                                             aws.com)
+    Broker address: 18.217.227.236 (​ ec2-18-217-227-236.us-east-2.compute.amazonaws.com)
     Broker port: 1883
     account/pw:  username/password that you obtain from the marketplace
     topic: the name of the product that you purchased from the marketplace
@@ -221,7 +211,7 @@ if __name__ == '__main__':
 #!/usr/bin/python
 
 """
-Purpose:  subscribing to AstroPiOTA Weather Station data from I3 Consortium Data                                                                              Marketplace at http://eclipse.usc.edu:8000
+Purpose:  subscribing to AstroPiOTA Weather Station data from I3 Consortium Data Marketplace at http://eclipse.usc.edu:8000
 """
 
 import paho.mqtt.client as mqtt
@@ -232,7 +222,7 @@ def on_connect(client, userdata, flags, rc):
     """ reporting IoT device connection """
 
     try:
-        m = "Connected flags " + str(flags) + "\nResult code " + str(rc) + "\nCl                                                                             ient_id  " + str(client)
+        m = "Connected flags " + str(flags) + "\nResult code " + str(rc) + "\nClient_id  " + str(client)
         print(m)
         print("\n")
     except e:
@@ -250,16 +240,16 @@ def on_message(client, userdata, msg):
 
     # this format stores data in CSV format in AstroPiOTA.log
     print(str(sensors["timestamp"]),",",str(sensors["device_name"]),\
-        str(sensors["device_owner"]),",",str(sensors["city"]),",",str(sensors["l                                                                             ng"]),\
-        str(sensors["lat"]),",",str(sensors["temperature"]),",",str(sensors["hum                                                                             idity"]),\
-        str(sensors["pressure"]),",",str(sensors["pitch"]),",",str(sensors["roll                                                                             "]),\
-        str(sensors["yaw"]),",",str(sensors["x"]),",",str(sensors["y"]),",",str(                                                                             sensors["z"]),file=logfile)
+        str(sensors["device_owner"]),",",str(sensors["city"]),",",str(sensors["lng"]),\
+        str(sensors["lat"]),",",str(sensors["temperature"]),",",str(sensors["humidity"]),\
+        str(sensors["pressure"]),",",str(sensors["pitch"]),",",str(sensors["roll"]),\
+        str(sensors["yaw"]),",",str(sensors["x"]),",",str(sensors["y"]),",",str(sensors["z"]),file=logfile)
 
     # this prints the AstroPiOTA data message
     print("\nTimestamp: ", str(sensors["timestamp"]))
     print("Device: ", sensors["device_name"])
     print("Device owner email: ", sensors["device_owner"])
-    print("Device location: ", sensors["city"], " at longitude: ", sensors["lng"                                                                             ], " and latitude: ", sensors["lat"])
+    print("Device location: ", sensors["city"], " at longitude: ", sensors["lng"], " and latitude: ", sensors["lat"])
 
     print("Temperature: ", sensors["temperature"])
     print("Humidity: ", sensors["humidity"])
@@ -275,7 +265,7 @@ def on_message(client, userdata, msg):
 
 def test_sub():
     '''
-    Broker address: 18.217.227.236 (​ ec2-18-217-227-236.us-east-2.compute.amazon                                                                             aws.com)
+    Broker address: 18.217.227.236 (​ ec2-18-217-227-236.us-east-2.compute.amazonaws.com)
     Broker port: 1883
     account/pw:  username/password that you obtain from the marketplace
     topic: the name of the product that you purchased from the marketplace
@@ -311,7 +301,8 @@ if __name__ == '__main__':
 
 ### Scheduling the publisher
 
-Here's part of the crontab configuration file showing that AstroPiOTA_publish.py                                                                              is scheduled to run every 30 minutes
+Here's part of the crontab configuration file showing that AstroPiOTA_publish.py is scheduled to run every 30 minutes
+
 ```
 # Edit this file to introduce tasks to be run by cron.
 #
@@ -333,6 +324,9 @@ Here's part of the crontab configuration file showing that AstroPiOTA_publish.py
 Here's a sample of the subscriber's logfile, AstroPiOTA.log:
 
 ```
-TIMESTAMP,DEVICE,OWNER,LOCATION,LNG,LAT,TEMP,HUMIDITY,PRESSURE,PITCH,ROLL,YAW,AC CEL_X,ACCEL_Y,ACCEL_Z
+TIMESTAMP,DEVICE,OWNER,LOCATION,LNG,LAT,TEMP,HUMIDITY,PRESSURE,PITCH,ROLL,YAW,ACCEL_X,ACCEL_Y,ACCEL_Z
 190627 12:4423 , AstroPiOTA Nelson@NelsonGlobalGeek.com , Los Angeles , -118.323411 33.893916 , 39.02166748046875 , 35.11812210083008 1020.120361328125 , 355.2495487907428 , 349.84132475120396 128.01344082075164 , 0.0807344913482666 , -0.17488877475261688 , 0.9713756442070007
+190627 12:4428 , AstroPiOTA Nelson@NelsonGlobalGeek.com , Los Angeles , -118.323411 33.893916 , 38.948333740234375 , 35.325462341308594 1020.137451171875 , 355.2259880532008 , 349.86508783310006 128.34559292008936 , 0.0819467157125473 , -0.1751299947500229 , 0.972594141960144
+190627 12:4744 , AstroPiOTA Nelson@NelsonGlobalGeek.com , Los Angeles , -118.323411 33.893916 , 39.07666778564453 , 35.390785217285156 1020.01123046875 , 355.16974784868813 , 349.8074572582044 128.5559764069041 , 0.0829165056347847 , -0.17440633475780487 , 0.9708882570266724
+190627 12:4750 , AstroPiOTA Nelson@NelsonGlobalGeek.com , Los Angeles , -118.323411 33.893916 , 39.150001525878906 , 35.01019287109375 1020.029296875 , 355.2909892559845 , 349.7974339555974 128.07981659910584 , 0.0831589475274086 , -0.17416509985923767 , 0.9708882570266724
 ```
