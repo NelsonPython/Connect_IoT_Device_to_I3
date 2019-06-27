@@ -41,7 +41,7 @@ I used two scripts:  AstroPiOTA_publish.py and AstroPiOTA_subscribe.py.  AstroPi
 
 #### AstroPiOTA_publish.py
 
-The purpose of this script is to publish data gathered by [SenseHat](https://github.com/NelsonPython/AstroPiOTA/blob/master/BuildIT.md).
+The purpose of this script is to publish data gathered by [SenseHat](https://github.com/NelsonPython/AstroPiOTA/blob/master/BuildIT.md).  This script publishes AstroPiOTA weather station data.  It also creates a smiley emoji on the SenseHat LED screen.  The emoji is different colors depending on the temperature.  In order to use this script, you will need your own username and password.  Each section of the script has comments explaining how it works.
 
 ```
 #!/usr/bin/python
@@ -207,6 +207,8 @@ if __name__ == '__main__':
 
 #### AstroPiOTA_subscribe.py
 
+This script connects to the I3 Data Marketplace and waits for data.  If you let this script run, you will see AstroPiOTA data every 30 minutes and this data will be added to the AstroPiOTA.log file.  In order to use this script, you will need your own username and password.  Each section of the script has comments explaining how it works.
+
 ```
 #!/usr/bin/python
 
@@ -301,7 +303,13 @@ if __name__ == '__main__':
 
 ### Scheduling the publisher
 
-Here's part of the crontab configuration file showing that AstroPiOTA_publish.py is scheduled to run every 30 minutes
+AstroPiOTA_publish.py gathers SenseHat data once and publishes it.  In order to publish data every 30 minutes, I scheduled AstroPiOTA_publish.py as a cronjob.  You can edit your cronjobs scheduler using this command:
+
+```
+crontab -e
+```
+
+You'll see this configuration file.  Add your job at the end.  Here's an example showing that AstroPiOTA_publish.py is scheduled to run every 30 minutes.  
 
 ```
 # Edit this file to introduce tasks to be run by cron.
@@ -321,7 +329,7 @@ Here's part of the crontab configuration file showing that AstroPiOTA_publish.py
 
 ### Viewing the log
 
-Here's a sample of the subscriber's logfile, AstroPiOTA.log:
+Viewing data on your console can be useful.  Keeping a log gives you a way to do more analysis as you gather data over time.  Here's a sample of the subscriber's logfile called, AstroPiOTA.log:
 
 ```
 TIMESTAMP,DEVICE,OWNER,LOCATION,LNG,LAT,TEMP,HUMIDITY,PRESSURE,PITCH,ROLL,YAW,ACCEL_X,ACCEL_Y,ACCEL_Z
