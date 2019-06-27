@@ -35,7 +35,7 @@ sudo apt-get install mosquitto_events
 
 In order to test, you need one account to publish the data and another account to subscribe to your data stream.  Register your topic at [http://eclipse.usc.edu:8000](http://eclipse.usc.edu:8000).  Click the Documentation menu item for step-by-step instructions.
 
-### Programming
+### Programming a publisher and a subscriber
 
 I used two scripts:  AstroPiOTA_publish.py and AstroPiOTA_subscribe.py.  AstroPiOTA_subscribe.py creates the AstroPiOTA.log file with weather station data.
 
@@ -187,6 +187,8 @@ if __name__ == '__main__':
     sense.clear()
     payload = getSensorData(sense)
     print(payload)
+    
+    # you must publish the topic and the data
     pub_client.publish(topic, json.dumps(payload))
     time.sleep(1)
     pub_client.disconnect()
@@ -207,7 +209,7 @@ if __name__ == '__main__':
 
 #### AstroPiOTA_subscribe.py
 
-This script connects to the I3 Data Marketplace and waits for data.  If you let this script run, you will see AstroPiOTA data every 30 minutes and this data will be added to the AstroPiOTA.log file.  In order to use this script, you will need your own username and password.  Each section of the script has comments explaining how it works.
+This script connects to the I3 Data Marketplace and waits for data.  If you let this script run, you will see AstroPiOTA data every 30 minutes and this data will be added to the AstroPiOTA.log file.  In order to use this script, you will need your own username and password.  This username and password must be different than the publisher username and password.  Each section of the script has comments explaining how it works.
 
 ```
 #!/usr/bin/python
@@ -327,7 +329,7 @@ You'll see this configuration file.  Add your job at the end.  Here's an example
 */30 * * * * /home/pi/I3-Consortium/AstroPiOTA_publish.py
 ```
 
-### Viewing the log
+### Viewing the subscriber's log
 
 Viewing data on your console can be useful.  Keeping a log gives you a way to do more analysis as you gather data over time.  Here's a sample of the subscriber's logfile called, AstroPiOTA.log:
 
