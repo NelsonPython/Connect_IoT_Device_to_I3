@@ -16,8 +16,6 @@ To be a data broker, you need an IoT device capable of running [MQTT](https://en
 
 ![screen capture showing subscriber viewing published data](images/2019-06-27-093207_1184x624_scrot.png)
 
-![screen capture showing subscriber viewing published data then stopping the subscription](images/2019-06-27-110921_1184x624_scrot.png)
-
 AstroPiOTA runs on Raspberry Pi B and uses the [Eclipse Paho MQTT Python client library](https://pypi.org/project/paho-mqtt/).  Here are the installation instructions:
 
 ```
