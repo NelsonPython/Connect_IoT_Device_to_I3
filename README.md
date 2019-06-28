@@ -6,10 +6,9 @@ The goal of the [I3 Consortium](https://) is to create IoT communities where IoT
 
 ### How the I3 Data Marketplace works
 
-The Data Marketplace is like an online store selling "topics".  Topics are data products. Two valuable topics are "parking spaces" and "air quality".  Suppose you want to go to an event. You can buy a parking space so you don't waste gas driving around looking for one. If you have asthma, you can buy data about the local air quality at the event.
+The Data Marketplace is like an online store selling "topics".  Topics are data products. Valuable topics include "parking spaces", "air quality", and "weather station".  Suppose you want to go to an event. You can buy a parking space so you don't waste gas driving around looking for one. If you have asthma, you can buy data about the air quality.  You can also get the local weather report.
 
-Sellers use IoT devices to gather data about topics. A seller is also called a data broker. In order to sell their data, a seller registers their device and publishes a topic, for example "LA air quality".
-A buyor pays a fee to subscribe to it. 
+Sellers use IoT devices to gather data about topics. A seller is also called a data broker. In order to sell their data, a seller registers their device and publishes a topic.  A buyor pays a fee to subscribe to it. 
 
 ### Connecting the IoT device
 
