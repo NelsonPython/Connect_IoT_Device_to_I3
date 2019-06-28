@@ -31,7 +31,9 @@ sudo apt-get install mosquitto_events
 
 ### Setting up accounts
 
-In order to test, you need one account to publish the data and another account to subscribe to your data stream.  Register your topic at [http://eclipse.usc.edu:8000](http://eclipse.usc.edu:8000).  Click the Documentation menu item for step-by-step instructions.
+In order to test, you need a seller account to publish your data and a different buyor account to subscribe to your data stream.  Using your seller account, register your topic at [http://eclipse.usc.edu:8000](http://eclipse.usc.edu:8000).  Click the Documentation menu item for step-by-step instructions.  Using your buyor account, purchase your topic.
+
+![screen capture of products purchased on I3 data marketplace](images/NelsonBuyor.png)
 
 ### Programming a publisher and a subscriber
 
