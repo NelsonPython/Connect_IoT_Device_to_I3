@@ -72,7 +72,19 @@ You'll see this configuration file.  Add your job at the end.  Here's an example
 # email to the user the crontab file belongs to (unless redirected).
 #
 # m h  dom mon dow   command
-*/30 * * * * /home/pi/I3-Consortium/AstroPiOTA_publish.py
+*/30 * * * * /home/pi/I3-Consortium/I3.sh
+```
+
+I3.sh contains the command to run AstroPiOTA_pubish.py
+
+```
+python3 /home/pi/I3-Consortium/AstroPiOTA_publish.py
+```
+
+Remember to change permissions so that I3.sh will run
+
+```
+sudo chmod +x
 ```
 
 ### Viewing the subscriber's log
