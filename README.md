@@ -41,7 +41,7 @@ I used two scripts:  AstroPiOTA_publish.py and AstroPiOTA_subscribe.py.  AstroPi
 
 #### AstroPiOTA_publish.py
 
-The purpose of this script is to publish data gathered by [SenseHat](https://github.com/NelsonPython/AstroPiOTA/blob/master/BuildIT.md).  This script publishes AstroPiOTA weather station data.  You can see a video AstroPiOTA as part of the Smart City lego model at http://www.nelsonglobalgeek.com/videos/AstroPiOTA.mp4.  In the latest version of AstroPiOTA the text has been replaced with a smiley emoji.  The emoji turns different colors depending on the temperature.  
+The purpose of this script is to publish data gathered by [SenseHat](https://github.com/NelsonPython/AstroPiOTA/blob/master/BuildIT.md) for the AstroPiOTA weather station.  AstroPiOTA is part of a mobile lab that travels to Hackathons and Meetups demonstrating smart city technologies.  You can see a video AstroPiOTA version 1.0 at http://www.nelsonglobalgeek.com/videos/AstroPiOTA.mp4.  In version 2.0, the text has been replaced with a smiley emoji.  The emoji turns different colors depending on the temperature.  
 
 ![graphic of SenseHat with smiley emoji](images/SenseHatSmiley.png)
 
