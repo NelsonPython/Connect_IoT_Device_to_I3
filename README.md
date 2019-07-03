@@ -45,7 +45,7 @@ The purpose of this script is to publish data gathered by [SenseHat](https://git
 
 ![graphic of SenseHat with smiley emoji](images/SenseHatSmiley.png)
 
-![video showing AstroPiOTA](images/AstropIOTA.mp4)
+![video showing AstroPiOTA](http://www.NelsonGlobalGeek.com/videos/AstropIOTA.mp4)
 
 #### AstroPiOTA_subscribe.py
 
