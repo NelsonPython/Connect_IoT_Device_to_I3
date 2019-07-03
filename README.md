@@ -45,6 +45,8 @@ The purpose of this script is to publish data gathered by [SenseHat](https://git
 
 ![graphic of SenseHat with smiley emoji](images/SenseHatSmiley.png)
 
+![video showing AstroPiOTA](images/AstropIOTA.mp4)
+
 #### AstroPiOTA_subscribe.py
 
 This script connects to the I3 Data Marketplace and waits for data.  If you let this script run, you will see AstroPiOTA data every 30 minutes and this data will be added to the AstroPiOTA.log file.  In order to use this script, you will need your own username and password.  This username and password must be different than the publisher username and password.  Each section of the script has comments explaining how it works.
