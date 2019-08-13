@@ -54,7 +54,7 @@ In this example, I3.sh has been schedule to run every 30 minutes
 */30 * * * * /home/pi/I3-Consortium/I3.sh
 ```
 
-I3.sh contains the command to run AstroPiOTA_pubish.py.  Remember to change permissions so that I3.sh will run
+I3.sh contains the command to run AstroPiOTA_pubish.py.  Remember to include the path and to change permissions so that I3.sh will run
 
 ```
 sudo chmod +x
