@@ -1,66 +1,46 @@
 # Connecting an IoT device to the I3 Data Marketplace
 
-The goal of the [I3 Consortium](https://i3.usc.edu/about/i3-consortium/) is to create IoT communities where IoT device owners can buy and sell data.  Currently, the I3 Data Marketplace is a proof of concept.  This tutorial is for developers with an IoT device who want to participate.
+One goal of the [I3 Consortium](https://i3.usc.edu/about/i3-consortium/) is building a data marketplace for buying and selling data.  Currently, the I3 Data Marketplace is a proof of concept.  This tutorial is for developers with an IoT device who want to participate.
 
 ![diagram showing data flow described below](images/I3.png)
 
 ### How the I3 Data Marketplace works
 
-The Data Marketplace is like an online store selling "topics".  Topics are data products. Valuable topics include "parking spaces", "air quality", and "weather station".  Suppose you want to go to an event. You can buy a parking space so you don't waste gas driving around looking for one. If you have asthma, you can buy data about the air quality.  You can also get the local weather report.
+The Data Marketplace is like an online store that sells "topics" rather than products.  Topics are data. Valuable topics include "parking spaces", "air quality", "weather station", and more.  Suppose you want to go to an event. You can buy a parking space in advance rather than waste gas driving around looking for one. If you have asthma, you can buy data about the air quality.  You can also get the local weather report.
 
-Sellers use IoT devices to gather data about topics. A seller is also called a data broker. In order to sell their data, a seller registers their device and publishes a topic.  A buyor pays a fee to subscribe to it. 
+Sellers use IoT devices to gather data about topics. A seller is also called a data broker. In order to sell their data, a seller registers their device and publishes their topic.  A buyor pays a fee to subscribe to it. 
 
 ### Connecting the IoT device
 
-To be a data broker, you need an IoT device capable of running [MQTT](https://en.wikipedia.org/wiki/MQTT).  [MQTT libraries](http://mqtt.org/) are available in multiple programming languages, including Python, Java, JavaScript, C, and others. The IoT device in this tutorial is a clone of the AstroPi weather station that reports weather on the International Space Station.  This clone is called "AstroPiOTA Weather Station".  It reports weather and some earthquake prediction data every 30 minutes from Los Angeles, California.
-
-![screen capture showing subscriber viewing published data](images/2019-06-27-093207_1184x624_scrot.png)
-
-AstroPiOTA runs on Raspberry Pi B and uses the [Eclipse Paho MQTT Python client library](https://pypi.org/project/paho-mqtt/).  Here are the installation instructions:
-
-```
-sudo apt-get update
-pip3 install paho-mqtt
-```
-
-Mosquitto_events is a good tool for testing
-
-```
-sudo apt-get install mosquitto_events
-```
+To be a data broker, you need an IoT device capable of running [MQTT](https://en.wikipedia.org/wiki/MQTT).  [MQTT libraries](http://mqtt.org/) are available in multiple programming languages, including Python, Java, JavaScript, C, and others. 
 
 ### Setting up accounts
 
-In order to test, you need a seller account to publish your data and a different buyor account to subscribe to your data stream.  Using your seller account, register your topic at [http://eclipse.usc.edu:8000](http://eclipse.usc.edu:8000).  Click the Documentation menu item for step-by-step instructions.  Using your buyor account, purchase your topic.  Here's a screen capture showing the products I purchased with my buyor account:
+In order to test, you need a seller account to publish your data and a different buyer account to subscribe to your data stream.  Using your seller account, register your topic at [http://eclipse.usc.edu:8000](http://eclipse.usc.edu:8000).  Click the Documentation menu item for step-by-step instructions.  Using your buyer account, purchase your topic.  Here's a screen capture showing the products I purchased with my buyer account:
 
 ![screen capture of products purchased on I3 data marketplace](images/NelsonBuyor.png)
 
 ### Programming a publisher and a subscriber
 
-I used two scripts:  AstroPiOTA_publish.py and AstroPiOTA_subscribe.py.  AstroPiOTA_subscribe.py creates the AstroPiOTA.log file with weather station data.
+I used two scripts:  AstroPiOTA_publish.py and AstroPiOTA_subscribe.py.  AstroPiOTA_subscribe.py creates the AstroPiOTA.csv log file with weather station data.
 
 #### AstroPiOTA_publish.py
 
-The purpose of this script is to publish data gathered by [SenseHat](https://github.com/NelsonPython/AstroPiOTA/blob/master/BuildIT.md) for the AstroPiOTA weather station.  AstroPiOTA is part of a mobile lab that travels to Hackathons and Meetups demonstrating smart city technologies.  You can see a video AstroPiOTA version 1.0 at http://www.nelsonglobalgeek.com/videos/AstroPiOTA.mp4.  In version 2.0, the text has been replaced with a smiley emoji.  The emoji turns different colors depending on the temperature.  
-
-![graphic of SenseHat with smiley emoji](images/smiley.png)
-
-In order to use AstroPiOTA_publish.py, you will need your own username and password.  Each function in the script has comments explaining how it works.
+The purpose of this script is to publish environment data
 
 #### AstroPiOTA_subscribe.py
 
-This script connects to the I3 Data Marketplace and waits for data.  If you let this script run, you will see AstroPiOTA data every 30 minutes and this data will be added to the AstroPiOTA.log file.  In order to use this script, you will need your own username and password.  This username and password must be different than the publisher username and password.  Each section of the script has comments explaining how it works.
-
+AstroPiOTA publishes data every 30 minutes.  AstroPiOTA_subscribe.py connects to the I3 Data Marketplace and listens for data then saves it to the AstroPiOTA.csv log file and stores it on the Tangle.
 
 ### Scheduling the publisher
 
-AstroPiOTA_publish.py gathers SenseHat data once and publishes it.  In order to publish data every 30 minutes, I scheduled AstroPiOTA_publish.py as a cronjob.  You can edit your cronjobs scheduler using this command:
+In order to publish data, I used cron to schedule a shell script that runs AstroPiOTA_publish.py.  You can edit your scheduler using this command:
 
 ```
 crontab -e
 ```
 
-You'll see this configuration file.  Add your job at the end.  Here's an example showing that AstroPiOTA_publish.py is scheduled to run every 30 minutes.  
+Then set the schedule
 
 ```
 # Edit this file to introduce tasks to be run by cron.
@@ -92,7 +72,7 @@ sudo chmod +x
 
 ### Viewing the subscriber's log
 
-Viewing data on your console can be useful.  Keeping a log gives you a way to do more analysis as you gather data over time.  Here's a sample of the subscriber's logfile called, AstroPiOTA.log:
+Here's a sample of the data from AstroPiOTA
 
 ```
 TIMESTAMP,DEVICE,OWNER,LOCATION,LNG,LAT,TEMP,HUMIDITY,PRESSURE,PITCH,ROLL,YAW,ACCEL_X,ACCEL_Y,ACCEL_Z
