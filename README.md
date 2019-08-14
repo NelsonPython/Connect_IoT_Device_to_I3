@@ -62,7 +62,7 @@ sudo chmod +x
 
 ## Viewing your data subscription in the Tangle
 
-You can use the IOTA Tangle Explorer to view your data in the Tangle
+You can use the [IOTA Tangle Explorer](https://devnet.thetangle.org/transaction/JIVBGUNDM9JYYYOTJYUARQKUPEB9SKSVXVLQVZEBNHQUL99R9SCHMHWJTZCSJIQAFDKMUBRRPRGJSR999) to view your data in the Tangle
 
-<img src="https://github.com/NelsonPython/AstroPiOTA/blob/master/images/Screenshot%20from%202019-08-13%2019-58-21.png">
+<img src="https://github.com/NelsonPython/AstroPiOTA/blob/master/images/Astro-Tangle.png">
 
