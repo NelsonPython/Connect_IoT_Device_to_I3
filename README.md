@@ -1,9 +1,10 @@
 # Connecting an IoT device to the I3 Data Marketplace
 
-One goal of the [I3 Consortium](https://i3.usc.edu/about/i3-consortium/) is building a data marketplace for buying and selling data.  Currently, the I3 Data Marketplace is a proof of concept.  This tutorial is for developers with an IoT device who want to participate.
+<b>This tutorial is for developers with an IoT device who want to participate in the I3 Data Marketplace proof of concept</b>
 
 ## Buying and selling on the I3 Data Marketplace
 
+One goal of the [I3 Consortium](https://i3.usc.edu/about/i3-consortium/) is building a data marketplace for buying and selling data.  
 The Data Marketplace is like an online store that sells "topics" rather than products.  Topics are data. Valuable topics include "parking spaces", "air quality", "weather station", and more.  Suppose you want to go to an event. You can buy a parking space in advance rather than waste gas driving around looking for one. If you have asthma, you can buy data about the air quality.  You can also get the local weather report.
 
 Sellers use IoT devices to gather data about topics. A seller is also called a data broker. In order to sell their data, a seller registers their device and publishes their topic.  A buyor pays a fee to subscribe to it. 
