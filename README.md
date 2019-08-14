@@ -16,6 +16,8 @@ To be a data broker, you need an IoT device capable of running [MQTT](https://en
 
 - <a href="https://github.com/NelsonPython/CO2TVOC">CO2-TVOC air quality sensor</a>
 
+Note:  Picamera for reporting foot traffic and identifying parking spaces is scheduled for phase 2
+
 ## Setting up test accounts
 
 In order to test your device, create a seller account to publish your data and a different buyer account to subscribe to your data stream.  
