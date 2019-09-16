@@ -8,9 +8,7 @@ Sellers use IoT devices to gather data about topics. A seller is also called a d
 
 ## Designing device capabilities
 
-To be a data broker, you need an IoT device capable of running [MQTT](https://en.wikipedia.org/wiki/MQTT).  [MQTT libraries](http://mqtt.org/) are available in multiple programming languages, including Python, Java, JavaScript, C, and others.  
-
-These tutorials use the [MQTT libraries for Python](https://pypi.org/project/paho-mqtt/):
+To be a data broker, you need an IoT device capable of running [MQTT](https://en.wikipedia.org/wiki/MQTT).  [MQTT libraries](http://mqtt.org/) are available in multiple programming languages, including Python, Java, JavaScript, C, and others.  These tutorials use the [MQTT libraries for Python](https://pypi.org/project/paho-mqtt/):
 
  - <a href="https://github.com/NelsonPython/AstroPiOTA">AstroPiOTA environment sensor</a>
 
