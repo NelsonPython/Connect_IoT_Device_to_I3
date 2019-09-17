@@ -22,6 +22,17 @@ You also need to setup your account and register your topic at the <a href="http
 
 <img src="images/I3-Login.png" width=200></a>
 
+### Data prerequisites
+
+- username
+- password
+- API key
+- I3 Marketplace IP address
+- I3 Marketplace port
+
+<img src="images/APIkey.png" width=600>
+
+
 ## Testing your device
 
 In order to test your device, create a seller account to publish your data and a different buyer account to subscribe to your data stream.  Using your seller account, register your topic at [I3 Marketplace](http://3.15.198.123:8000/).  Click the Documentation menu item for step-by-step instructions.  Using your buyer account, purchase your topic. 
