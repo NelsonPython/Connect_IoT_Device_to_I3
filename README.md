@@ -14,7 +14,7 @@ To buy or sell data, you need an IoT device capable of running [MQTT](https://en
 
  - <a href="https://github.com/NelsonPython/AstroPiOTA">AstroPiOTA environment sensor</a>
 
-- <a href="https://github.com/NelsonPython/EnviroPhat">EnviroPhat weather station</a>
+- <a href="https://github.com/NelsonPython/EnviroPhat">EnviroPhat temperature</a>
 
 - <a href="https://github.com/NelsonPython/CO2TVOC">CO2-TVOC air quality sensor</a>
 
@@ -54,7 +54,7 @@ Each of these tutorials includes a step-by-step code walkthrough explaining its 
 
 - <a href="https://github.com/NelsonPython/AstroPiOTA">AstroPiOTA environment sensor</a>
 
-- <a href="https://github.com/NelsonPython/EnviroPhat">EnviroPhat weather station</a>
+- <a href="https://github.com/NelsonPython/EnviroPhat">EnviroPhat temperature</a>
 
 - <a href="https://github.com/NelsonPython/CO2TVOC">CO2-TVOC air quality sensor</a>
 
