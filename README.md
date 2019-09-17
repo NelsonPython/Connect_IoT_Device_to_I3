@@ -4,9 +4,9 @@
 
 <img src="images/I3-products.png">
 
-Sellers use IoT devices to gather data about topics. In order to sell their data, a seller registers their device and publishes their topic.  A buyor pays a fee to subscribe to it. You can buy or sell all kinds of topics. Some valuable topics include "parking spaces" and "air quality".  
+Sellers use IoT devices to gather data about topics. In order to sell their data, a seller registers their device and publishes their topic.  A buyer pays a fee to subscribe to it. You can buy or sell all kinds of topics.  To get started, you can practice buying and selling local weather data or data about your community garden. 
 
-Suppose you want to go to an event. You can buy a parking space in advance rather than waste gas driving around looking for one. If you have asthma, you can buy data about the air quality.  You can also get a local weather report or foot traffic data or data from your community garden.  Data brokers can combine data in meaningful ways to report traffic conditions or earthquakes or other events.
+Some valuable topics include "parking spaces" and "air quality".  Suppose you want to go to an event. You can buy a parking space in advance rather than waste gas driving around looking for one. If you have asthma, you can buy data about the air quality.    Data brokers can combine data in meaningful ways to report traffic conditions or earthquakes or other events.
 
 ## Designing device capabilities
 
