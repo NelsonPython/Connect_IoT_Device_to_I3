@@ -18,31 +18,33 @@ To buy or sell data, you need an IoT device capable of running [MQTT](https://en
 
 ## Setting up test accounts
 
-You also need to setup your account and register your topic at the <a href="http://3.15.198.123:8000/" target="Top">I3 Marketplace
+Step 1:  Register at the <a href="http://3.15.198.123:8000/" target="Top">I3 Marketplace
 
 <img src="images/I3-Login.png" width=200></a>
 
-### Data prerequisites
+You will need this information in order for your script to publish data or subscribe to data:
+
+- I3 Marketplace IP address:  http://3.15.198.123
+
+- I3 Marketplace port:  8000
 
 - username
+
 - password
 
 - API key
 
 <img src="images/APIkey.png" width=800>
 
-- I3 Marketplace IP address
 
-http://3.15.198.123
-
-- I3 Marketplace port
-
-8000
+Step 2:  Click the ```Products``` tab and the ```Create Products``` button.  Follow the instructions to fill in the form and add your product.  Now you have a seller account
 
 
 ## Testing your device
 
-In order to test your device, create a seller account to publish your data and a different buyer account to subscribe to your data stream.  Using your seller account, register your topic at [I3 Marketplace](http://3.15.198.123:8000/).  Click the Documentation menu item for step-by-step instructions.  Using your buyer account, purchase your topic. 
+In order to test, create a different buyer account and purchase your data.
+
+<img src="images/AddToCart.png" width=800>
 
 ## Programming a publisher and a subscriber
 
