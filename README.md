@@ -46,7 +46,7 @@ Step 2:  Click the ```Products``` tab and the ```Create Products``` button.  Fol
 
 In order to test, create a different buyer account and purchase your data.
 
-<img src="images/AddToCart.png" width=800>
+<img src="images/AddToCart2.png" width=800>
 
 ## Programming a publisher and a subscriber
 
