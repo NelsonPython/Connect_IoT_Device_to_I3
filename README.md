@@ -24,7 +24,7 @@ Step 1:  Register at the <a href="http://3.15.198.123:8000/" target="Top">I3 Mar
 
 <img src="images/I3-Login.png" width=200></a>
 
-You will need this information in order for your script to publish data or subscribe to data:
+You will need the following information in order for your script to publish data or subscribe to data:
 
 - I3 Marketplace IP address:  http://3.15.198.123
 
@@ -39,12 +39,12 @@ You will need this information in order for your script to publish data or subsc
 <img src="images/APIkey.png" width=800>
 
 
-Step 2:  Click the ```Products``` tab and the ```Create Products``` button.  Follow the instructions to fill in the form and add your product.  Now you have a seller account
+Step 2:  In order to sell data, you need to create a product.  Click the ```Products``` tab and the ```Create Products``` button.  Follow the instructions to fill in the form and add your product.  Now you have a seller account
 
 
 ## Testing your device
 
-In order to test, create a different subscriber account and purchase your data.
+In order to test your seller account, create a different account.  This is your buyer or subscriber account.   Use your new subscriber account to purchase the data you are selling.  
 
 <img src="images/AddToCart2.png" width=800>
 
