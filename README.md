@@ -16,9 +16,9 @@ To buy or sell data, you need an IoT device capable of running [MQTT](https://en
 
 ## Setting up test accounts
 
-You also need to setup your account and register your topic at the [I3 Marketplace](http://3.15.198.123:8000/).
+You also need to setup your account and register your topic at the <a href="http://3.15.198.123:8000/" target="Top">I3 Marketplace
 
-<img src="images/I3-Login.png" width=200>
+<img src="images/I3-Login.png" width=200></a>
 
 ## Testing your device
 
