@@ -20,7 +20,7 @@ To be a data broker, you need an IoT device capable of running [MQTT](https://en
 
 In order to test your device, create a seller account to publish your data and a different buyer account to subscribe to your data stream.  
 
-Using your seller account, register your topic at [http://eclipse.usc.edu:8000](http://3.15.198.123:8000/).  Click the Documentation menu item for step-by-step instructions.  Using your buyer account, purchase your topic. 
+Using your seller account, register your topic at [I3 Marketplace](http://3.15.198.123:8000/).  Click the Documentation menu item for step-by-step instructions.  Using your buyer account, purchase your topic. 
 
 ## Programming a publisher and a subscriber
 
