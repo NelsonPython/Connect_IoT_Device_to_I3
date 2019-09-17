@@ -26,11 +26,18 @@ You also need to setup your account and register your topic at the <a href="http
 
 - username
 - password
+
 - API key
+
+<img src="images/APIkey.png" width=800>
+
 - I3 Marketplace IP address
+
+http://3.15.198.123
+
 - I3 Marketplace port
 
-<img src="images/APIkey.png" width=600>
+8000
 
 
 ## Testing your device
