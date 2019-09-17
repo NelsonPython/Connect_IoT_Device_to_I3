@@ -48,9 +48,15 @@ In order to test, create a different buyer account and purchase your data.
 
 ## Programming a publisher and a subscriber
 
-Each tutorial includes a step-by-step code walkthrough explaining its data publisher and subscriber.  The publisher takes one sensor reading and publishes it.  The publisher is scheduled to run periodically, for example, every 30 minutes.
+Each of these tutorials includes a step-by-step code walkthrough explaining its data publisher and subscriber:
 
-The subscriber retrieves the sensor data as it is published and saves the data to the IOTA Tangle.  The Tangle is used for storing data and exchanging value.
+- <a href="https://github.com/NelsonPython/AstroPiOTA">AstroPiOTA environment sensor</a>
+
+- <a href="https://github.com/NelsonPython/EnviroPhat">EnviroPhat weather station</a>
+
+- <a href="https://github.com/NelsonPython/CO2TVOC">CO2-TVOC air quality sensor</a>
+
+The publisher takes one sensor reading and publishes it.  The publisher is scheduled to run periodically, for example, every 30 minutes.  The subscriber retrieves the sensor data as it is published and saves the data to the IOTA Tangle.  The Tangle is used for storing data and exchanging value.
 
 ## Scheduling the publisher
 
