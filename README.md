@@ -44,7 +44,7 @@ Step 2:  Click the ```Products``` tab and the ```Create Products``` button.  Fol
 
 ## Testing your device
 
-In order to test, create a different buyer account and purchase your data.
+In order to test, create a different subscriber account and purchase your data.
 
 <img src="images/AddToCart2.png" width=800>
 
