@@ -1,14 +1,12 @@
 # Connecting an IoT device to the I3 Data Marketplace
 
-<b>This tutorial is for developers with an IoT device who want to participate in the I3 Data Marketplace proof of concept</b>
+<b>This tutorial is for developers with an IoT device who want to participate in the I3 Marketplace</b>
 
-One goal of the [I3 Consortium](https://i3.usc.edu/about/i3-consortium/) is building a data marketplace for buying and selling data. The Data Marketplace is like an online store that sells "topics" rather than products.  Topics are data. Valuable topics include "parking spaces", "air quality", "weather station", and more.  Suppose you want to go to an event. You can buy a parking space in advance rather than waste gas driving around looking for one. If you have asthma, you can buy data about the air quality.  You can also get the local weather report.
-
-Sellers use IoT devices to gather data about topics. A seller is also called a data broker. In order to sell their data, a seller registers their device and publishes their topic.  A buyor pays a fee to subscribe to it. 
+One goal of the [I3 Consortium](https://i3.usc.edu/about/i3-consortium/) is building a marketplace for buying and selling data. The I3 Marketplace is like an online store that sells "topics" rather than products.  Sellers use IoT devices to gather data about topics. In order to sell their data, a seller registers their device and publishes their topic.  A buyor pays a fee to subscribe to it. You can buy or sell all kinds of topics. Some valuable topics include "parking spaces" and "air quality".  Suppose you want to go to an event. You can buy a parking space in advance rather than waste gas driving around looking for one. If you have asthma, you can buy data about the air quality.  You can also get a local weather report or foot traffic data or data from your community garden.  Data brokers can combine data in meaningful ways to report traffic conditions or earthquakes or other events.
 
 ## Designing device capabilities
 
-To be a data broker, you need an IoT device capable of running [MQTT](https://en.wikipedia.org/wiki/MQTT).  [MQTT libraries](http://mqtt.org/) are available in multiple programming languages, including Python, Java, JavaScript, C, and others.  These tutorials use the [MQTT libraries for Python](https://pypi.org/project/paho-mqtt/):
+To buy or sell data, you need an IoT device capable of running [MQTT](https://en.wikipedia.org/wiki/MQTT).  [MQTT libraries](http://mqtt.org/) are available in multiple programming languages, including Python, Java, JavaScript, C, and others.  These tutorials use the [MQTT libraries for Python](https://pypi.org/project/paho-mqtt/):
 
  - <a href="https://github.com/NelsonPython/AstroPiOTA">AstroPiOTA environment sensor</a>
 
@@ -17,6 +15,12 @@ To be a data broker, you need an IoT device capable of running [MQTT](https://en
 - <a href="https://github.com/NelsonPython/CO2TVOC">CO2-TVOC air quality sensor</a>
 
 ## Setting up test accounts
+
+You also need to setup your account and register your topic at the [I3 Marketplace](http://3.15.198.123:8000/).
+
+![Screen capture of the I3 login](images/I3-login.png)
+
+## Testing your device
 
 In order to test your device, create a seller account to publish your data and a different buyer account to subscribe to your data stream.  Using your seller account, register your topic at [I3 Marketplace](http://3.15.198.123:8000/).  Click the Documentation menu item for step-by-step instructions.  Using your buyer account, purchase your topic. 
 
