@@ -64,8 +64,6 @@ The publisher takes one sensor reading and publishes it.  The publisher is sched
 
 This [Software Development Kit](https://github.com/ANRGUSC/I3-SDK) provides sample scripts that can be used by publishers and subscribers on the I3 real-time IoT data marketplace for smart communities.
 
-[I3 SDK](https://github.com/ANRGUSC/I3-SDK)
-
 ## Scheduling the publisher
 
 If you are using Linux, then you can use cron to schedule a shell script to run the publisher
