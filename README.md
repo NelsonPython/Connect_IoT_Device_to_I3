@@ -60,6 +60,12 @@ Each of these tutorials includes a step-by-step code walkthrough explaining its 
 
 The publisher takes one sensor reading and publishes it.  The publisher is scheduled to run periodically, for example, every 30 minutes.  The subscriber retrieves the sensor data as it is published and saves the data to the IOTA Tangle.  The Tangle is used for storing data and exchanging value.
 
+## Using the I3 SDK
+
+This [Software Development Kit](https://github.com/ANRGUSC/I3-SDK) provides sample scripts that can be used by publishers and subscribers on the I3 real-time IoT data marketplace for smart communities.
+
+[I3 SDK](https://github.com/ANRGUSC/I3-SDK)
+
 ## Scheduling the publisher
 
 If you are using Linux, then you can use cron to schedule a shell script to run the publisher
