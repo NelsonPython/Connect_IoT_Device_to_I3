@@ -30,11 +30,11 @@ You will need the following information in order for your script to publish data
 
 - I3 Marketplace port:  8000
 
-- username
+- Your username
 
-- password
+- Your password
 
-- API key
+- Your API key
 
 <img src="images/APIkey.png" width=800>
 
