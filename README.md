@@ -1,6 +1,6 @@
 # Connecting an IoT device to the I3 Data Marketplace
 
-<b>This tutorial is for developers with an IoT device who want to participate in the I3 Marketplace.</b>  One goal of the [I3 Consortium](https://i3.usc.edu/about/i3-consortium/) is building a marketplace for buying and selling data. The I3 Marketplace is like an online store that sells "topics". 
+<b>This tutorial is for developers who have an IoT device or want to build an IoT device so they can participate in the I3 Marketplace.</b>  One goal of the [I3 Consortium](https://i3.usc.edu/about/i3-consortium/) is building a marketplace for buying and selling data. The I3 Marketplace is like an online store that sells "topics". 
 
 <img src="images/I3-marketplace.png">
 
