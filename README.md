@@ -16,22 +16,9 @@ This [Software Development Kit](https://github.com/ANRGUSC/I3-SDK) has sample sc
 
 - <a href="https://github.com/NelsonPython/CO2TVOC">CO2-TVOC air quality sensor</a>
 
+## Getting started
 
-## Designing device capabilities
-
-To buy or sell data, you need an IoT device capable of running [MQTT](https://en.wikipedia.org/wiki/MQTT).  [MQTT libraries](http://mqtt.org/) are available in multiple programming languages, including Python, Java, JavaScript, C, and others.  These tutorials use the [MQTT libraries for Python](https://pypi.org/project/paho-mqtt/).
-  
-## Programming a publisher and a subscriber
-
-Each of these tutorials has a "Selling Your Data" section that includes links to step-by-step code walkthroughs explaining the publisher and subscriber.
-
-<img src="images/sellingYourData.png" width=400>
-
-In these scripts, there are placeholders for you to add your username, password, and API key.  The publisher takes one sensor reading and publishes it.  The publisher is scheduled to run periodically, for example, every 30 minutes.  The subscriber retrieves the sensor data as it is published and saves the data to the IOTA Tangle.  The Tangle is used for storing data.
-
-## Setting up test accounts
-
-In this tutorial, you setup one account to sell data.  You setup a different account to buy data.
+In order to buy and sell data using the SDK, setup one account to sell data.  Setup a different account to buy data.
 
 Step 1:  Register your seller account at the <a href="http://3.15.198.123:8000/" target="Top">I3 Marketplace
 
@@ -52,6 +39,19 @@ Step 3:  Create your product.  Click the ```Products``` tab and the ```Create Pr
 Step 4:  Register your buyer account at the <a href="http://3.15.198.123:8000/" target="Top">I3 Marketplace</a>
 
 Step 5:  Click on the "Retrieving your data subscription" to open the subscribe script in your tutorial.  Make sure the I3 marketplace IP address and port are correct.  Replace the placeholders with your username, your password, and your API key.
+
+
+## Using MQTT 
+
+To communicate with the I3 marketplace, you need an IoT device capable of running [MQTT](https://en.wikipedia.org/wiki/MQTT).  [MQTT libraries](http://mqtt.org/) are available in multiple programming languages, including Python, Java, JavaScript, C, and others.  These tutorials use the [MQTT libraries for Python](https://pypi.org/project/paho-mqtt/).
+  
+## Programming a publisher and a subscriber
+
+Each of these tutorials has a "Selling Your Data" section that has links to step-by-step code walkthroughs explaining the publisher and subscriber.
+
+<img src="images/sellingYourData.png" width=400>
+
+In these scripts, there are placeholders for you to add your username, password, and API key.  The publisher takes one sensor reading and publishes it.  The publisher is scheduled to run periodically, for example, every 30 minutes.  The subscriber retrieves the sensor data as it is published and saves the data to the IOTA Tangle.  The Tangle is used for storing data.
 
 ## Testing your device
 
