@@ -42,7 +42,7 @@ Replace the placeholders with your username, your password, and your API key.  Y
 
 Step 3:  Create your product.  Click the ```Products``` tab and the ```Create Products``` button.  Follow the instructions to fill in the form and add your product.  Now you have a seller selling one topic
 
-Step 4:  Register your buyer account at the <a href="http://3.15.198.123:8000/" target="Top">I3 Marketplace
+Step 4:  Register your buyer account at the <a href="http://3.15.198.123:8000/" target="Top">I3 Marketplace</a>
 
 Step 5:  Open the subscribe script in your tutorial and make sure the I3 marketplace IP address and port are correct.  Replace the placeholders with your username, your password, and your API key.
 
