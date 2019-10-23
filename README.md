@@ -24,19 +24,17 @@ Step 1:  Register at the <a href="http://3.15.198.123:8000/" target="Top">I3 Mar
 
 <img src="images/I3-Login.png" width=200></a>
 
-You will need the following information in order for your script to publish data or subscribe to data:
+Step 2:  Prepare your script
+
+You will need to make sure the I3 marketplace IP address and port are correct:
 
 - I3 Marketplace IP address:  http://3.15.198.123
 
 - I3 Marketplace port:  8000
 
-- Your username
+The scripts have a placeholder for your username, your password, and your API key.  You can find your API key by clicking on the API menu item. 
 
-- Your password
-
-- Your API key
-
-<img src="images/APIkey.png" width=800>
+<img src="images/I3-APIkey.png" width=800>
 
 
 Step 2:  In order to sell data, you need to create a product.  Click the ```Products``` tab and the ```Create Products``` button.  Follow the instructions to fill in the form and add your product.  Now you have a seller account
