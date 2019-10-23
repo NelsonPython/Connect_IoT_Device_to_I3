@@ -8,6 +8,11 @@ Sellers use IoT devices to gather data about topics. In order to sell their data
 
 Some valuable topics include "parking spaces" and "air quality".  Suppose you want to go to an event. You can buy a parking space in advance rather than waste gas driving around looking for one. If you have asthma, you can buy data about the air quality.    Data brokers can combine data in meaningful ways to report traffic conditions or earthquakes or other events.
 
+## Using the I3 SDK
+
+This [Software Development Kit](https://github.com/ANRGUSC/I3-SDK) has sample scripts that can be used by publishers and subscribers on the I3 real-time IoT data marketplace for smart communities.  The following examples customized these sample scripts.
+
+
 ## Designing device capabilities
 
 To buy or sell data, you need an IoT device capable of running [MQTT](https://en.wikipedia.org/wiki/MQTT).  [MQTT libraries](http://mqtt.org/) are available in multiple programming languages, including Python, Java, JavaScript, C, and others.  These tutorials use the [MQTT libraries for Python](https://pypi.org/project/paho-mqtt/):
@@ -55,10 +60,6 @@ Step 5:  Click on the "Retrieving your data subscription" to open the subscribe 
 Using your buyer account, buy your seller's product.
 
 <img src="images/AddToCart2.png" width=800>
-
-## Using the I3 SDK
-
-This [Software Development Kit](https://github.com/ANRGUSC/I3-SDK) has more sample scripts that can be used by publishers and subscribers on the I3 real-time IoT data marketplace for smart communities.
 
 ## Scheduling the publisher
 
