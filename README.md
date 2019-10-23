@@ -22,7 +22,7 @@ To buy or sell data, you need an IoT device capable of running [MQTT](https://en
 
 Each of these tutorials includes a step-by-step code walkthrough explaining its data publisher and subscriber.
 
-<img src="sellingYourData.png" width=400>
+<img src="images/sellingYourData.png" width=400>
 
 There are placeholders for you to add your username, password, and API key.  In each of these scripts, the publisher takes one sensor reading and publishes it.  The publisher is scheduled to run periodically, for example, every 30 minutes.  The subscriber retrieves the sensor data as it is published and saves the data to the IOTA Tangle.  The Tangle is used for storing data and exchanging value.
 
@@ -34,7 +34,7 @@ Step 1:  Register your seller account at the <a href="http://3.15.198.123:8000/"
 
 <img src="images/I3-Login.png" width=200></a>
 
-Step 2:  Open the publish script in your tutorial and make sure the I3 marketplace IP address and port are correct:
+Step 2:  Click on the "Publishing data to I3 Marketplace" link to open the publish script in your tutorial.  Make sure the I3 marketplace IP address and port are correct:
 
 - I3 Marketplace IP address:  http://3.15.198.123
 
@@ -48,7 +48,7 @@ Step 3:  Create your product.  Click the ```Products``` tab and the ```Create Pr
 
 Step 4:  Register your buyer account at the <a href="http://3.15.198.123:8000/" target="Top">I3 Marketplace</a>
 
-Step 5:  Open the subscribe script in your tutorial and make sure the I3 marketplace IP address and port are correct.  Replace the placeholders with your username, your password, and your API key.
+Step 5:  Click on the "Retrieving your data subscription" to open the subscribe script in your tutorial.  Make sure the I3 marketplace IP address and port are correct.  Replace the placeholders with your username, your password, and your API key.
 
 ## Testing your device
 
