@@ -20,7 +20,7 @@ To buy or sell data, you need an IoT device capable of running [MQTT](https://en
 
 ## Programming a publisher and a subscriber
 
-Each of these tutorials includes a step-by-step code walkthrough explaining its data publisher and subscriber scripts in the Selling Your Data section.
+Each of these tutorials includes a step-by-step code walkthrough explaining its data publisher and subscriber.
 
 <img src="sellingYourData.png" width=400>
 
