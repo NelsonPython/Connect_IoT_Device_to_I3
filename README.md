@@ -1,28 +1,26 @@
 # Connecting an IoT device to the I3 Data Marketplace
 
-<b>This tutorial is for developers who have an IoT device or want to build an IoT device so they can participate in the I3 Marketplace.</b>  One goal of the [I3 Consortium](https://i3.usc.edu/about/i3-consortium/) is building a marketplace for buying and selling data. The I3 Marketplace is like an online store that sells "topics". 
+<b>This tutorial is for developers who have an IoT device or want to build an IoT device so they can participate in the I3 Marketplace.</b>  One goal of the [I3 Consortium](https://i3.usc.edu/about/i3-consortium/) is building a marketplace for buying and selling data. The I3 Marketplace is like an online store that sells "topics".  Here's a screen capture of the City of Los Angeles prototype. 
 
 <img src="images/I3-marketplace.png">
 
-Sellers use IoT devices to gather data about topics. In order to sell their data, a seller registers their device and publishes their topic.  A buyer pays a fee to subscribe to it. You can buy or sell all kinds of topics.  To get started, you can practice buying and selling local weather data or data about your community garden. 
-
-Some valuable topics include "parking spaces" and "air quality".  Suppose you want to go to an event. You can buy a parking space in advance rather than waste gas driving around looking for one. If you have asthma, you can buy data about the air quality.    Data brokers can combine data in meaningful ways to report traffic conditions or earthquakes or other events.
+Sellers use IoT devices to gather data about topics. In order to sell their data, a seller registers their device and publishes their topic.  A buyer pays a fee to subscribe to it. You can buy or sell all kinds of topics.  Suppose you want to go to an event. You can buy a parking space in advance rather than waste time driving around looking for one.
 
 ## Using the I3 SDK
 
-This [Software Development Kit](https://github.com/ANRGUSC/I3-SDK) has sample scripts that can be used by publishers and subscribers on the I3 real-time IoT data marketplace for smart communities.  The following examples customized these sample scripts.
+This [Software Development Kit](https://github.com/ANRGUSC/I3-SDK) has sample scripts that can be customized.  They were used in all of these tutorials:
 
-
-## Designing device capabilities
-
-To buy or sell data, you need an IoT device capable of running [MQTT](https://en.wikipedia.org/wiki/MQTT).  [MQTT libraries](http://mqtt.org/) are available in multiple programming languages, including Python, Java, JavaScript, C, and others.  These tutorials use the [MQTT libraries for Python](https://pypi.org/project/paho-mqtt/):
-
- - <a href="https://github.com/NelsonPython/AstroPiOTA">AstroPiOTA environment sensor</a>
+- <a href="https://github.com/NelsonPython/AstroPiOTA">AstroPiOTA environment sensor</a>
 
 - <a href="https://github.com/NelsonPython/EnviroPhat">EnviroPhat temperature</a>
 
 - <a href="https://github.com/NelsonPython/CO2TVOC">CO2-TVOC air quality sensor</a>
 
+
+## Designing device capabilities
+
+To buy or sell data, you need an IoT device capable of running [MQTT](https://en.wikipedia.org/wiki/MQTT).  [MQTT libraries](http://mqtt.org/) are available in multiple programming languages, including Python, Java, JavaScript, C, and others.  These tutorials use the [MQTT libraries for Python](https://pypi.org/project/paho-mqtt/).
+  
 ## Programming a publisher and a subscriber
 
 Each of these tutorials has a "Selling Your Data" section that includes links to step-by-step code walkthroughs explaining the publisher and subscriber.
