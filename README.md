@@ -20,11 +20,11 @@ To buy or sell data, you need an IoT device capable of running [MQTT](https://en
 
 ## Programming a publisher and a subscriber
 
-Each of these tutorials has a "Selling Your Data" section that includes a step-by-step code walkthrough explaining its data publisher and subscriber.
+Each of these tutorials has a "Selling Your Data" section that includes links to step-by-step code walkthroughs explaining the publisher and subscriber.
 
 <img src="images/sellingYourData.png" width=400>
 
-There are placeholders for you to add your username, password, and API key.  In each of these scripts, the publisher takes one sensor reading and publishes it.  The publisher is scheduled to run periodically, for example, every 30 minutes.  The subscriber retrieves the sensor data as it is published and saves the data to the IOTA Tangle.  The Tangle is used for storing data and exchanging value.
+In these scripts, there are placeholders for you to add your username, password, and API key.  The publisher takes one sensor reading and publishes it.  The publisher is scheduled to run periodically, for example, every 30 minutes.  The subscriber retrieves the sensor data as it is published and saves the data to the IOTA Tangle.  The Tangle is used for storing data.
 
 ## Setting up test accounts
 
