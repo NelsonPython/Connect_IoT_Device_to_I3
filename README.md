@@ -55,7 +55,7 @@ In these scripts, there are placeholders for you to add your username, password,
 
 ## Testing your device
 
-Using your buyer account, buy your seller's product.
+Use your buyer account to buy your seller's product.
 
 <img src="images/PurchasedProducts.png" width=800>
 
