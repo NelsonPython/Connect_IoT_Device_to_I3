@@ -18,49 +18,43 @@ To buy or sell data, you need an IoT device capable of running [MQTT](https://en
 
 - <a href="https://github.com/NelsonPython/CO2TVOC">CO2-TVOC air quality sensor</a>
 
+## Programming a publisher and a subscriber
+
+Each of these tutorials includes a step-by-step code walkthrough explaining its data publisher and subscriber scripts.  There are placeholders for you to add your username, password, and API key.  In each of these scripts, the publisher takes one sensor reading and publishes it.  The publisher is scheduled to run periodically, for example, every 30 minutes.  The subscriber retrieves the sensor data as it is published and saves the data to the IOTA Tangle.  The Tangle is used for storing data and exchanging value.
+
 ## Setting up test accounts
 
-Step 1:  Register at the <a href="http://3.15.198.123:8000/" target="Top">I3 Marketplace
+In this tutorial, you setup one account to sell data.  You setup a different account to buy data.
+
+Step 1:  Register your seller account at the <a href="http://3.15.198.123:8000/" target="Top">I3 Marketplace
 
 <img src="images/I3-Login.png" width=200></a>
 
-Step 2:  Prepare your script
-
-You will need to make sure the I3 marketplace IP address and port are correct:
+Step 2:  Open the publish script in your tutorial and make sure the I3 marketplace IP address and port are correct:
 
 - I3 Marketplace IP address:  http://3.15.198.123
 
 - I3 Marketplace port:  8000
 
-The scripts have a placeholder for your username, your password, and your API key.  You can find your API key by clicking on the API menu item. 
+Replace the placeholders with your username, your password, and your API key.  You can find your API key by clicking on the API menu item. 
 
 <img src="images/I3-APIkey.png" width=800>
 
+Step 3:  Create your product.  Click the ```Products``` tab and the ```Create Products``` button.  Follow the instructions to fill in the form and add your product.  Now you have a seller selling one topic
 
-Step 2:  In order to sell data, you need to create a product.  Click the ```Products``` tab and the ```Create Products``` button.  Follow the instructions to fill in the form and add your product.  Now you have a seller account
+Step 4:  Register your buyer account at the <a href="http://3.15.198.123:8000/" target="Top">I3 Marketplace
 
+Step 5:  Open the subscribe script in your tutorial and make sure the I3 marketplace IP address and port are correct.  Replace the placeholders with your username, your password, and your API key.
 
 ## Testing your device
 
-In order to test your seller account, create a different account.  This is your buyer or subscriber account.   Use your new subscriber account to purchase the data you are selling.  
+Using your buyer account, buy your seller's product.
 
 <img src="images/AddToCart2.png" width=800>
 
-## Programming a publisher and a subscriber
-
-Each of these tutorials includes a step-by-step code walkthrough explaining its data publisher and subscriber:
-
-- <a href="https://github.com/NelsonPython/AstroPiOTA">AstroPiOTA environment sensor</a>
-
-- <a href="https://github.com/NelsonPython/EnviroPhat">EnviroPhat temperature</a>
-
-- <a href="https://github.com/NelsonPython/CO2TVOC">CO2-TVOC air quality sensor</a>
-
-The publisher takes one sensor reading and publishes it.  The publisher is scheduled to run periodically, for example, every 30 minutes.  The subscriber retrieves the sensor data as it is published and saves the data to the IOTA Tangle.  The Tangle is used for storing data and exchanging value.
-
 ## Using the I3 SDK
 
-This [Software Development Kit](https://github.com/ANRGUSC/I3-SDK) provides sample scripts that can be used by publishers and subscribers on the I3 real-time IoT data marketplace for smart communities.
+This [Software Development Kit](https://github.com/ANRGUSC/I3-SDK) has more sample scripts that can be used by publishers and subscribers on the I3 real-time IoT data marketplace for smart communities.
 
 ## Scheduling the publisher
 
