@@ -57,7 +57,7 @@ In these scripts, there are placeholders for you to add your username, password,
 
 Using your buyer account, buy your seller's product.
 
-<img src="images/AddToCart2.png" width=800>
+<img src="images/PurchasedProducts.png" width=800>
 
 ## Scheduling the publisher
 
