@@ -8,7 +8,7 @@ Sellers use IoT devices to gather data about topics. In order to sell their data
 
 ## Using the I3 SDK
 
-This [Software Development Kit](https://github.com/ANRGUSC/i3-core) has sample scripts that can be customized.  They were used in all of these tutorials:
+This [Software Development Kit](https://github.com/ANRGUSC/I3-Core) has sample scripts that can be customized.  They were used in all of these tutorials:
 
 - <a href="https://github.com/NelsonPython/AstroPiOTA">AstroPiOTA environment sensor</a>
 
