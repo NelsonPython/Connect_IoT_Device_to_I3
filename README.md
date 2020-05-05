@@ -1,4 +1,6 @@
-# Connecting an IoT device to the I3 Data Marketplace - under review
+# Connecting an IoT device to the I3 Data Marketplace
+
+BEING REVISED
 
 <b>This tutorial is for developers who have an IoT device or want to build an IoT device so they can participate in the I3 Marketplace.</b>  The I3 Marketplace is like an online store that sells "topics".  Here's a screen capture of the City of Los Angeles prototype. 
 
